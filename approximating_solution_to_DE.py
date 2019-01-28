@@ -1,4 +1,4 @@
-import matplotlib,pyplot as plt
+import matplotlib.pyplot as plt
 
 delta_t=2
 pi=3.1415926
@@ -53,7 +53,7 @@ def calculate_range(current_phi_s, current_phi_s_d):
     return new_range
 
 
-def stepequation("takes in the last term of each eqn"):
+def stepequation():
     delta_phi.append(phi_b[i] - phi[i])
     phi_b.append(euler_step(phi_b[i], phi_b_d[i]))
     phi_b_d.append(euler_step(phi_b_d[i],phi_b_dd[i]))
