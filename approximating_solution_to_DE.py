@@ -64,6 +64,19 @@ def stepequation("takes in the last term of each eqn"):
     range.append(calculate_range(phi_s[i], phi_s_d[i]))
 
 def set_constants(l1,l2):
+    global a_s, a_b, w_s_squared, w_b_squared
+    l1 = 0.2
+    l2 = 0.8
+    ls = 1
+    #l1 + l2 == 1
+    m1 = 0.12  # kg
+    m2 = 0.005  # kg
+    mb = 0.1 * (m1 ** 0.5) * (l1 + l2)
+    lb = 0.5 - l1
+    dmax = (2 + 2 ** 0.5) / m2 * (m1 * l1 - mb * lb)
+    g = 9.8
+    Ib = (1 / 12) * mb  # check on this definition for moment of inertia
+
     phi_b.append(3 * pi / 4)
     phi_b_d.append(0.0)
     phi_s.append(pi / 2)
